@@ -1,0 +1,58 @@
+---
+// Footer.astro
+---
+
+<footer class="bg-terahome-navy pt-16 pb-8 border-t border-terahome-blue/30 text-terahome-white/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a href="#hero" class="text-2xl font-bold font-heading text-terahome-white flex items-center gap-2 mb-6 inline-flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-terahome-lightgreen">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          </svg>
+          Terahome
+        </a>
+        <p class="text-sm leading-relaxed mb-6">
+          Penyedia layanan internet rumah cepat, stabil, dan terpercaya untuk mendukung segala aktivitas digital Anda.
+        </p>
+      </div>
+      
+      <!-- Links: Perusahaan -->
+      <div>
+        <h4 class="text-terahome-white font-bold mb-6">Perusahaan</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#tentang" class="hover:text-terahome-lightgreen transition-colors">Tentang Kami</a></li>
+          <li><a href="#keunggulan" class="hover:text-terahome-lightgreen transition-colors">Keunggulan</a></li>
+          <li><a href="#kontak" class="hover:text-terahome-lightgreen transition-colors">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      
+      <!-- Links: Layanan -->
+      <div>
+        <h4 class="text-terahome-white font-bold mb-6">Layanan</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#paket" class="hover:text-terahome-lightgreen transition-colors">Paket Internet</a></li>
+          <li><a href="#paket" class="hover:text-terahome-lightgreen transition-colors">Promo Terkini</a></li>
+          <li><a href="#kontak" class="hover:text-terahome-lightgreen transition-colors">Bantuan Teknis</a></li>
+        </ul>
+      </div>
+      
+      <!-- Links: Legal -->
+      <div>
+        <h4 class="text-terahome-white font-bold mb-6">Legal</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-terahome-lightgreen transition-colors">Syarat & Ketentuan</a></li>
+          <li><a href="#" class="hover:text-terahome-lightgreen transition-colors">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="border-t border-terahome-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-sm">
+      <p>&copy; {new Date().getFullYear()} Terahome. Hak cipta dilindungi undang-undang.</p>
+    </div>
+  </div>
+</footer>

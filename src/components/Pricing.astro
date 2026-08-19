@@ -1,0 +1,32 @@
+---
+// Pricing.astro
+import PricingCard from './PricingCard.astro';
+
+const packages = [
+  { speed: '5 Mbps', price: 'Rp 155k' },
+  { speed: '10 Mbps', price: 'Rp 195k' },
+  { speed: '20 Mbps', price: 'Rp 220k' },
+  { speed: '30 Mbps', price: 'Rp 250k' },
+  { speed: '50 Mbps', price: 'Rp 350k' },
+  { speed: '100 Mbps', price: 'Rp 400k', popular: true },
+];
+---
+
+<section id="paket" class="py-20 md:py-28 bg-terahome-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-terahome-navy mb-4">Pilih Paket Internet Terbaik Untuk Anda</h2>
+      <p class="text-lg text-terahome-dark/80">Temukan paket internet yang sesuai dengan kebutuhan rumah Anda.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {packages.map((pkg) => (
+        <PricingCard 
+          speed={pkg.speed} 
+          price={pkg.price} 
+          popular={pkg.popular} 
+        />
+      ))}
+    </div>
+  </div>
+</section>

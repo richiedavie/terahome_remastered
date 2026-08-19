@@ -1,0 +1,45 @@
+---
+// PricingCard.astro
+export interface Props {
+  speed: string;
+  price: string;
+  popular?: boolean;
+}
+
+const { speed, price, popular = false } = Astro.props;
+---
+
+<div class={`relative flex flex-col bg-terahome-white rounded-xl shadow-sm border ${popular ? 'border-terahome-green ring-1 ring-terahome-green' : 'border-gray-200'} p-8 h-full transition-transform hover:-translate-y-1 hover:shadow-md`}>
+  {popular && (
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-terahome-green text-terahome-white px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wider">
+      Paling Populer
+    </div>
+  )}
+  
+  <div class="mb-6">
+    <h3 class="text-terahome-navy font-bold text-xl mb-1">Paket {speed}</h3>
+    <div class="flex items-baseline gap-1">
+      <span class="text-3xl font-bold text-terahome-navy">{price}</span>
+      <span class="text-terahome-dark/70 text-sm">/ bln</span>
+    </div>
+  </div>
+  
+  <ul class="flex-1 space-y-4 mb-8">
+    <li class="flex items-start gap-3">
+      <svg class="h-5 w-5 text-terahome-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span class="text-terahome-dark/80 text-sm">Kecepatan Stabil {speed}</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <svg class="h-5 w-5 text-terahome-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span class="text-terahome-dark/80 text-sm">Koneksi Unlimited</span>
+    </li>
+  </ul>
+  
+  <a href="#kontak" class={`w-full py-3 rounded-md font-semibold text-center transition-colors ${popular ? 'bg-terahome-green hover:bg-terahome-darkgreen text-terahome-white' : 'bg-terahome-offwhite hover:bg-terahome-navy text-terahome-navy hover:text-terahome-white border border-terahome-navy/10'}`}>
+    Berlangganan
+  </a>
+</div>

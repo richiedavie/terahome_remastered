@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terahome-navy: #24384D;
+  --color-terahome-green: #4D795F;
+  --color-terahome-blue: #3E5F86;
+  --color-terahome-darkgreen: #315C48;
+  --color-terahome-lightgreen: #75A56A;
+  --color-terahome-yellow: #D9A33A;
+  --color-terahome-offwhite: #F4F3EC;
+  --color-terahome-white: #FFFFFF;
+  --color-terahome-dark: #17212B;
+
+  --font-heading: "Hanken Grotesk", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-terahome-offwhite);
+  color: var(--color-terahome-dark);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}

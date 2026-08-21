@@ -4,9 +4,16 @@ export interface Props {
   speed: string;
   price: string;
   popular?: boolean;
+  feature1: string;
+  feature2: string;
+  feature3: string;
+  feature4: string;
+  feature5: string;
+  feature6: string;
 }
 
-const { speed, price, popular = false } = Astro.props;
+const { speed, price, popular = false, feature1, feature2, feature3, feature4, feature5, feature6 } = Astro.props;
+const features = [feature1, feature2, feature3, feature4, feature5, feature6];
 ---
 
 <div class={`relative flex flex-col bg-terahome-white rounded-xl shadow-sm border ${popular ? 'border-terahome-green ring-1 ring-terahome-green' : 'border-gray-200'} p-8 h-full transition-transform hover:-translate-y-1 hover:shadow-md`}>
@@ -25,18 +32,14 @@ const { speed, price, popular = false } = Astro.props;
   </div>
   
   <ul class="flex-1 space-y-4 mb-8">
-    <li class="flex items-start gap-3">
-      <svg class="h-5 w-5 text-terahome-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span class="text-terahome-dark/80 text-sm">Kecepatan Stabil {speed}</span>
-    </li>
-    <li class="flex items-start gap-3">
-      <svg class="h-5 w-5 text-terahome-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span class="text-terahome-dark/80 text-sm">Koneksi Unlimited</span>
-    </li>
+    {features.map((feature) => (
+      <li class="flex items-start gap-3">
+        <svg class="h-5 w-5 text-terahome-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span class="text-terahome-dark/80 text-sm">{feature}</span>
+      </li>
+    ))}
   </ul>
   
   <a href="#kontak" class={`w-full py-3 rounded-md font-semibold text-center transition-colors ${popular ? 'bg-terahome-green hover:bg-terahome-darkgreen text-terahome-white' : 'bg-terahome-offwhite hover:bg-terahome-navy text-terahome-navy hover:text-terahome-white border border-terahome-navy/10'}`}>

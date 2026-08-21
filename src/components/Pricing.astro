@@ -3,12 +3,60 @@
 import PricingCard from './PricingCard.astro';
 
 const packages = [
-  { speed: '5 Mbps', price: 'Rp 155k' },
-  { speed: '10 Mbps', price: 'Rp 195k' },
-  { speed: '20 Mbps', price: 'Rp 220k' },
-  { speed: '30 Mbps', price: 'Rp 250k' },
-  { speed: '50 Mbps', price: 'Rp 350k' },
-  { speed: '100 Mbps', price: 'Rp 400k', popular: true },
+  {
+    speed: '5 Mbps', price: 'Rp 155k',
+    feature1: 'Kecepatan hingga 5 Mbps',
+    feature2: 'Cocok untuk 1–2 Perangkat',
+    feature3: 'Browsing & Media Sosial',
+    feature4: 'Belajar Online & Video Call',
+    feature5: 'Unlimited Tanpa Batas Kuota',
+    feature6: 'Dukungan Layanan 24/7',
+  },
+  {
+    speed: '10 Mbps', price: 'Rp 195k',
+    feature1: 'Kecepatan hingga 10 Mbps',
+    feature2: 'Cocok untuk 2-4 Perangkat',
+    feature3: 'Browsing & Media Sosial',
+    feature4: 'Belajar Online & Video Call',
+    feature5: 'Cocok untuk 2-4 Perangkat',
+    feature6: 'Dukungan Layanan 24/7',
+  },
+  {
+    speed: '20 Mbps', price: 'Rp 220k',
+    feature1: 'Kecepatan hingga 20 Mbps',
+    feature2: 'Unlimited Data / Tanpa Kuota',
+    feature3: 'Koneksi Fiber Optik Stabil',
+    feature4: 'Gratis Sewa Router Wi-Fi',
+    feature5: 'Ideal untuk Streaming HD',
+    feature6: 'Dukungan Layanan 24/7',
+  },
+  {
+    speed: '30 Mbps', price: 'Rp 250k', popular: true,
+    feature1: 'Kecepatan hingga 30 Mbps',
+    feature2: 'Unlimited Data / Tanpa Kuota',
+    feature3: 'Koneksi Fiber Optik Stabil',
+    feature4: 'Gratis Sewa Router Wi-Fi Dual-Band',
+    feature5: 'Lancar untuk Gaming & Work From Home',
+    feature6: 'Dukungan Layanan Prioritas 24/7',
+  },
+  {
+    speed: '50 Mbps', price: 'Rp 350k',
+    feature1: 'Kecepatan hingga 50 Mbps',
+    feature2: 'Unlimited Data / Tanpa Kuota',
+    feature3: 'Koneksi Fiber Optik Ultra Stabil',
+    feature4: 'Gratis Sewa Router Wi-Fi High-Speed',
+    feature5: 'Kapasitas Keluarga & Multi-Perangkat',
+    feature6: 'Dukungan Layanan Prioritas 24/7',
+  },
+  {
+    speed: '100 Mbps', price: 'Rp 400k',
+    feature1: 'Kecepatan Maksimal 100 Mbps',
+    feature2: 'Unlimited Data / Tanpa Kuota',
+    feature3: 'Koneksi Fiber Optik Performa Tinggi',
+    feature4: 'Gratis Sewa Router Wi-Fi Premium',
+    feature5: 'Optimal untuk 4K Ultra HD & Cloud',
+    feature6: 'Dukungan Layanan VIP 24/7',
+  },
 ];
 ---
 
@@ -25,6 +73,12 @@ const packages = [
           speed={pkg.speed} 
           price={pkg.price} 
           popular={pkg.popular} 
+          feature1={pkg.feature1}
+          feature2={pkg.feature2}
+          feature3={pkg.feature3}
+          feature4={pkg.feature4}
+          feature5={pkg.feature5}
+          feature6={pkg.feature6}
         />
       ))}
     </div>
